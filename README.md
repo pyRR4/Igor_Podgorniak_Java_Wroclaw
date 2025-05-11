@@ -2,7 +2,7 @@
 Project for Ocado Internship
 
 
-##Sposób działania algorytmu
+## Sposób działania algorytmu
 Na początku algorytm tworzy wszystkie możliwe plany płatności dla wszystkich zamówień, opierając się o 5 możliwości:
 - całkowita płatność kartą z rabatem
 - całkowita płatność punktami z rabatem
