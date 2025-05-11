@@ -19,8 +19,8 @@ public class Order {
     private List<String> promotions;
 
     @JsonCreator
-    public Order(@JsonProperty("orderId") String orderId,
-                 @JsonProperty("totalOrderValue") BigDecimal totalOrderValue,
+    public Order(@JsonProperty("id") String orderId,
+                 @JsonProperty("value") BigDecimal totalOrderValue,
                  @JsonProperty("promotions") List<String> promotions) {
         this.orderId = orderId;
         this.totalOrderValue = totalOrderValue;

@@ -28,20 +28,14 @@ public class App {
         OutputWriter outputWriter = new OutputWriter();
 
         try {
-            System.out.println("Reading payment methods from: " + paymentMethodsFilePath);
             List<PaymentMethod> allPaymentMethods = dataReader.readPaymentMethods(paymentMethodsFilePath);
-            System.out.println("Successfully read " + allPaymentMethods.size() + " payment methods.");
 
-            System.out.println("\nReading orders from: " + ordersFilePath);
             List<Order> ordersToProcess = dataReader.readOrders(ordersFilePath);
-            System.out.println("Successfully read " + ordersToProcess.size() + " orders.");
 
 
             PaymentOptimizer optimizer = new PaymentOptimizer(allPaymentMethods);
 
-            System.out.println("\nStarting payment optimization...");
             List<PaymentPlan> chosenPlans = optimizer.optimizePayments(ordersToProcess);
-            System.out.println("Payment optimization completed.");
 
             Map<String, BigDecimal> spendingSummary = optimizer.calculateSpendingSummary(chosenPlans);
 
